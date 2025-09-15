@@ -11,4 +11,4 @@ services:
       - /bin/bash
       - -c
       - |
-        ./test/experiments/t_smarbench_test.sh
+        ./t_smarbench_test.sh
