@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  hygraph:
+    image: mp4sini/hygraph:latest
+    hostname: hygraph
+    container_name: hygraph
+    volumes:
+      - "./results:/hygraph/results"
+    command:
+      - /bin/bash
+      - -c
+      - |
+        chmod +x /scripts/run_hygraph_evaluation.sh
+        chmod +x /scripts/download_dataset.sh
+        ./scripts/run_hygraph_evaluation.sh
