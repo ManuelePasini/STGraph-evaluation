@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -e 
+MY_VAR=$(grep -v '^#' .env | grep '^EVALUATION_SYSTEMS=' | cut -d '=' -f2-)
+
+# Trasforma la stringa in array usando la virgola come separatore
+IFS=',' read -r -a SYSTEMS <<< "$EVALUATION_SYSTEMS"
+
 echo "Running STGraph evaluation experiments..."
 
 if [ ! -f .env ]; then
@@ -8,10 +14,17 @@ if [ ! -f .env ]; then
     exit 1
 fi
 
-echo "Starting STGraph container..."
-docker compose -f docker-compose_dtgraph.yaml up
-echo "Evaluation of STGraph completed, results available in the results/ directory."
+run_evaluation() {
+    local system=$1
+    local compose_file="docker-compose_${system}.yaml"
+    
+    echo "Starting $system container..."
+    docker compose -f "$compose_file" up
+    echo "Evaluation of $system completed, results available in the results/${system,,} directory."
+}
 
-#echo "Running AeonG evaluation experiments..."
-#docker compose -f docker-compose_aeong.yaml up
-#echo "Evaluation of AeonG completed, results available in the results/ directory."
+for system in "${SYSTEMS[@]}"; do
+    run_evaluation "$system"
+done
+
+echo "All evaluations completed."
