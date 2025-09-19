@@ -4,7 +4,8 @@ services:
     image: mp4sini/aeong:latest
     tty: true
     stdin_open: true
-    env_file: .env
+    env_file:
+      - ./../env  
     volumes:
       - ./../results/aeong:/home/AeonG/tests/results/query_results
     command:
