@@ -9,7 +9,7 @@ IFS=',' read -r -a SYSTEMS <<< "$EVALUATION_SYSTEMS"
 echo "Running STGraph evaluation experiments..."
 
 if [ ! -f .env ]; then
-    cp .env.example .env
+    cp .env.example architectures/.env
     echo ".env file missing, created from .env.example. Please update it with your configuration in case of different parameters. Otherwise, re-run this script to continue."
     exit 1
 fi
