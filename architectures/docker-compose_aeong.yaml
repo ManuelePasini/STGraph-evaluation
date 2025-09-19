@@ -6,7 +6,7 @@ services:
     stdin_open: true
     env_file: .env
     volumes:
-      - ./results/aeong:/home/AeonG/tests/results/query_results
+      - ./../results/aeong:/home/AeonG/tests/results/query_results
     command:
       - /bin/bash
       - -c

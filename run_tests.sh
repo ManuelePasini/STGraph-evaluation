@@ -16,7 +16,7 @@ fi
 
 run_evaluation() {
     local system=$1
-    local compose_file="docker-compose_${system}.yaml"
+    local compose_file="architectures/docker-compose_${system}.yaml"
     
     echo "Starting $system container..."
     docker compose -f "$compose_file" up
