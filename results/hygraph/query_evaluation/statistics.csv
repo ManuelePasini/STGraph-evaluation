@@ -1,0 +1,7 @@
+test_id,model,dataset,datasetSize,threads,queryName,queryType,elapsedTime,numEntities,numMachines
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,EnvironmentCoverage,edgesDirection,67,10,1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,EnvironmentAggregate,edgesDirection,706128,100,1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,MaintenanceOwners,edgesDirection,55771761,100,1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,EnvironmentOutlier,edgesDirection,58694382,74,1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,AgentOutlier,edgesDirection,5610,100,1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,smartbench,small,1,AgentHistory,edgesDirection,62,1,1

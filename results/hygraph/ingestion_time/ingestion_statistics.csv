@@ -1,0 +1,6 @@
+test_id,model,startTimestamp,endTimestamp,dataset,datasetSize,threads,graphElapsedTime,tsElapsedTime,elapsedTime,numMachines,storage
+f61209be-0a38-4e0b-a189-cf07c93fc8df,HyGraph,1758034886,1758034901,smartbench,small,1,-1,-1,15906,1,-1
+5d2e226e-70fc-425c-b38c-529a7bf710c5,HyGraph,1758035504,1758035520,smartbench,small,1,-1,-1,15763,1,-1
+324b8df3-6dbd-4972-afb7-012874ff81de,HyGraph,1758092408,1758092424,smartbench,small,1,-1,-1,166310,1,-1
+52513bdc-a310-48d0-b736-2df8c6851d69,HyGraph,1758099663,1758099690,smartbench,small,1,-1,-1,27192,1,-1
+82e69fd1-53e7-4b09-b45a-249eb834c841,HyGraph,1758100926,1758100953,smartbench,small,1,-1,-1,27583,1,-1
