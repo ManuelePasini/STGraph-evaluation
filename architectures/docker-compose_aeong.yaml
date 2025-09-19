@@ -5,7 +5,7 @@ services:
     tty: true
     stdin_open: true
     env_file:
-      - ./../env  
+      - ./../.env  
     volumes:
       - ./../results/aeong:/home/AeonG/tests/results/query_results
     command:

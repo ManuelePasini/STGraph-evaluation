@@ -5,7 +5,7 @@ services:
     hostname: hygraph
     container_name: hygraph
     env_file:
-      - ./../env
+      - ./../.env
     volumes:
       - "./../results:/hygraph/results"
     command:
