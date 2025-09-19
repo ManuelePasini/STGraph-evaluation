@@ -2,8 +2,6 @@
 
 set -e 
 EVALUATION_SYSTEMS=$(grep -v '^#' .env | grep '^EVALUATION_SYSTEMS=' | cut -d '=' -f2-)
-
-# Trasforma la stringa in array usando la virgola come separatore
 IFS=',' read -r -a SYSTEMS <<< "$EVALUATION_SYSTEMS"
 
 echo "Running STGraph evaluation experiments..."
@@ -21,7 +19,7 @@ run_evaluation() {
     echo "Starting $system container..."
     docker compose -f "$compose_file" up
     docker compose -f "$compose_file" down
-    echo "Evaluation of $system completed, results available in the results/${system,,} directory."
+    echo "Evaluation of $system completed, results available in the results/${system} directory."
 }
 
 for system in "${SYSTEMS[@]}"; do
